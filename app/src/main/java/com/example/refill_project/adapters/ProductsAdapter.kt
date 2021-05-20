@@ -20,7 +20,7 @@ class ProductsAdapter(var context: Context, var list: ArrayList<Products>) : Rec
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as MyProducts).bind(list[position].id, list[position].name, list[position].price)
+        (holder as MyProducts).bind(list[position].id, list[position].name, list[position].description,list[position].price)
     }
 
     override fun getItemCount(): Int {
@@ -30,11 +30,13 @@ class ProductsAdapter(var context: Context, var list: ArrayList<Products>) : Rec
     inner class MyProducts(view: View): RecyclerView.ViewHolder(view){
         var tv_name = view.findViewById<TextView>(R.id.product_name)
         var tv_price = view.findViewById<TextView>(R.id.product_price)
-        fun bind(i:Int, n:String, p:Int){
+
+        fun bind(i:Int, n:String, d:String, p:Int){
             tv_name.text = n
             tv_price.text = p.toString()
             itemView.add_cart.setOnClickListener{
                 UserInfo.itemid = i
+                UserInfo.itemdescription = d
                 var obj = QtyFragment()
                 var manager = (itemView.context as Activity).fragmentManager
                 obj.show(manager, "Qty")

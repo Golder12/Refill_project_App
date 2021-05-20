@@ -20,12 +20,19 @@
         android:layout_height="wrap_content"
         android:src="@drawable/what_would_you_like_from_total" />
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/weight_rv"
         android:layout_width="match_parent"
-        android:layout_height="560dp" />
+        android:layout_height="500dp" />
 
     <!--suppress AndroidDomInspection -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        ></LinearLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -58,9 +65,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="77dp"
-            android:layout_marginLeft="77dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="32dp"
             app:srcCompat="@drawable/icon_metro_home" />
 
         <ImageView
@@ -70,11 +77,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="157dp"
-            android:layout_marginLeft="157dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginLeft="139dp"
+            android:layout_marginBottom="30dp"
             app:srcCompat="@drawable/icon_awesome_shopping_bag" />
-
 
         <ImageView
             android:id="@+id/priceTag"
@@ -83,9 +89,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="235dp"
-            android:layout_marginLeft="235dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginStart="246dp"
+            android:layout_marginLeft="246dp"
+            android:layout_marginBottom="29dp"
             app:srcCompat="@drawable/icon_ionic_md_pricetags" />
 
         <ImageView
@@ -95,10 +101,63 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="300dp"
-            android:layout_marginLeft="300dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginStart="348dp"
+            android:layout_marginLeft="348dp"
+            android:layout_marginBottom="30dp"
             app:srcCompat="@drawable/icon_material_account_circle" />
+
+        <TextView
+            android:id="@+id/hometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="Home"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/ordertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="8dp"
+            android:text="Your Order"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/pricetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="217dp"
+            android:layout_marginLeft="217dp"
+            android:layout_marginBottom="10dp"
+            android:text="Price Summary"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/profiletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="354dp"
+            android:layout_marginLeft="354dp"
+            android:layout_marginBottom="7dp"
+            android:text="You"
+            android:textColor="@color/white" />
+
     </RelativeLayout>
 
 

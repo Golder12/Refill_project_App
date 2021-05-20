@@ -39,7 +39,7 @@ class WeightsAct : AppCompatActivity() {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
             val headers = HashMap<String, String>()
-            headers.put("Cookie", "__test=69bd1d150c09c6607059ed4607baff02; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+            headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
             return headers
             }
         }

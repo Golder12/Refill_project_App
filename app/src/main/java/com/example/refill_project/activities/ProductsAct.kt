@@ -1,8 +1,11 @@
 package com.example.refill_project.activities
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -30,9 +33,9 @@ class ProductsAct : AppCompatActivity() {
         var rq: RequestQueue = Volley.newRequestQueue(this)
         var jar = object : JsonObjectRequest(Request.Method.GET, url, null, { response->
             for(x in 0 until response.length())
-                list.add(Products(response.getJSONObject(x.toString()).getInt("id"), response.getJSONObject(x.toString()).getString("name"), response.getJSONObject(x.toString()).getInt("price")))
+                list.add(Products(response.getJSONObject(x.toString()).getInt("id"), response.getJSONObject(x.toString()).getString("name"), response.getJSONObject(x.toString()).getString("description"), response.getJSONObject(x.toString()).getInt("price")))
             var adp = ProductsAdapter(this, list)
-            product_rv.layoutManager = LinearLayoutManager(this)
+            product_rv.layoutManager = GridLayoutManager(this, 2)
             product_rv.adapter = adp
             //textView.text = response.getJSONObject("0").getString("weight")
         }, { error -> showToast(error.message.toString())})
@@ -41,10 +44,11 @@ class ProductsAct : AppCompatActivity() {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
-                headers.put("Cookie", "__test=69bd1d150c09c6607059ed4607baff02; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
                 return headers
             }
         }
         rq.add(jar)
+
     }
 }

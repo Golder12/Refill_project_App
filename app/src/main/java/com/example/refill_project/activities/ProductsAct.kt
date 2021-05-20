@@ -13,17 +13,15 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.refill_project.R
 import com.example.refill_project.adapters.ProductsAdapter
-import com.example.refill_project.adapters.WeightsAdapter
 import com.example.refill_project.models.Products
-import com.example.refill_project.models.Weights
 import com.example.refill_project.showToast
 import kotlinx.android.synthetic.main.productsact.*
-import kotlinx.android.synthetic.main.weightsact.*
 
 class ProductsAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.productsact)
+
 
         val bundle: Bundle? = intent.extras
         val weightid = bundle!!.getInt("weightid")
@@ -49,6 +47,8 @@ class ProductsAct : AppCompatActivity() {
             }
         }
         rq.add(jar)
+
+
 
     }
 }

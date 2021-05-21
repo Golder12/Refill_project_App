@@ -4,29 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".QtyFragment">
-
-    <TextView
-        android:id="@+id/descriptionView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="TextView" />
+    tools:context=".AddressFragment">
 
     <EditText
-        android:id="@+id/et_qty"
+        android:id="@+id/et_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:ems="10"
-        android:hint="Enter Quantity"
-        android:inputType="number" />
+        android:layout_gravity="center"
+        android:gravity="start|top"
+        android:hint="Enter Delivery Address Details"
+        android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/btn_qty"
+        android:id="@+id/btn_address"
         android:layout_width="wrap_content"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="Add" />
+        android:text="Save" />
 
 </LinearLayout>

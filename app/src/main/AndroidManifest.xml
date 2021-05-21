@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Refill_project"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".activities.Signup"/>
+        <activity android:name=".activities.CheckoutActivity"/>
+        <activity android:name=".activities.Signup" />
         <activity android:name=".activities.CartAct" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.Splashscreen">

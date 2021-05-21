@@ -72,7 +72,7 @@ class QtyFragment : DialogFragment() {
                         @Throws(AuthFailureError::class)
                         override fun getHeaders(): Map<String, String> {
                             val headers = HashMap<String, String>()
-                            headers.put("Cookie", "__test=2b653bde7094ac2751ce8aaf5d0aaa0b; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                            headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
 
                             return headers
                         }

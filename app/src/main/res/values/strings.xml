@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Refill_project</string>
+    <string name="app_name">Refill</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -14,7 +14,6 @@
 
     <string name="homeloginlink">Refill Home</string>
     <string name="loginlink">Back to Sign in</string>
-
 
 
 </resources>

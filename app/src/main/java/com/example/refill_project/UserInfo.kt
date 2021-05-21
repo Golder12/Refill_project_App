@@ -6,6 +6,8 @@ class UserInfo {
         var fname: String = ""
         var itemid: Int = 0
         var itemdescription: String = ""
-        var qty: Int = 0
+        var qty: String = ""
+        var price: Int = 0
+        var name: String = ""
     }
 }

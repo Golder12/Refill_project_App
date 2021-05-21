@@ -13,11 +13,10 @@
         android:theme="@style/Theme.Refill_project"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".activities.MainActivity">
-        </activity>
-
-        <activity
-            android:name=".activities.Splashscreen">
+        <activity android:name=".activities.Signup"/>
+        <activity android:name=".activities.CartAct" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +25,7 @@
         </activity>
         <activity android:name=".activities.WeightsAct" />
         <activity android:name=".activities.ProductsAct" />
+        <activity android:name=".activities.Login" />
     </application>
 
 </manifest>

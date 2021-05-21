@@ -37,6 +37,9 @@ class ProductsAdapter(var context: Context, var list: ArrayList<Products>) : Rec
             itemView.add_cart.setOnClickListener{
                 UserInfo.itemid = i
                 UserInfo.itemdescription = d
+                UserInfo.name = n
+                UserInfo.price = p
+
                 var obj = QtyFragment()
                 var manager = (itemView.context as Activity).fragmentManager
                 obj.show(manager, "Qty")

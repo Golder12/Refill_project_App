@@ -14,7 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        
+        //receiving intent
+//        val bundle: Bundle? = intent.extras
+//        val welcome_msg = bundle!!.getString("welcome_msg")
+//        if(welcome_msg != null)
+//            showToast(welcome_msg)
 
         //total button
         totalimage.setOnClickListener {
@@ -28,28 +32,28 @@ class MainActivity : AppCompatActivity() {
         shellimage.setOnClickListener {
             val station:String = "Shell"
             val msg:String = "$station is not yet available."
-            showToast(msg, Toast.LENGTH_LONG)
+            showToast(msg)
         }
 
         //stabex button
         stabeximage.setOnClickListener {
             val station:String = "Stabex"
             val msg:String = "$station is not yet available."
-            showToast(msg, Toast.LENGTH_LONG)
+            showToast(msg)
         }
 
         //hass button
         hassimage.setOnClickListener {
             val station:String = "Hass"
             val msg:String = "$station is not yet available."
-            showToast(msg, Toast.LENGTH_LONG)
+            showToast(msg)
         }
 
         //oryx button
         oryximage.setOnClickListener {
             val station:String = "Oryx"
             val msg:String = "$station is not yet available."
-            showToast(msg, Toast.LENGTH_LONG)
+            showToast(msg)
         }
     }
 }

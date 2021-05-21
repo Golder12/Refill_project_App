@@ -5,6 +5,7 @@ class Products {
     var name: String
     var description : String
     var price: Int
+
     constructor(id: Int, name:String, description:String, price:Int){
         this.id = id
         this.name = name

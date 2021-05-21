@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.Signup">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:inputType="text"
+        android:id="@+id/fname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Last Name"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:inputType="text"
+        android:id="@+id/lname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Email Address"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Phone Number (07********) format"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:inputType="phone"
+        android:id="@+id/phonenumber"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:id="@+id/password"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Confirm Password"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:id="@+id/confirmpassword"/>
+
+    <ImageView
+        android:id="@+id/btnsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="369dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/signup" />
+</LinearLayout>

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.CheckoutActivity">
+    tools:context=".activities.OrderActivity">
 
     <TextView
-        android:id="@+id/tvfname"
+        android:id="@+id/tv2fname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvemail"
+        android:id="@+id/tv2email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -26,7 +26,7 @@
         android:layout_marginRight="156dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvlname" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2lname" />
 
     <TextView
         android:id="@+id/textView5"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:text="Email Address :"
-        app:layout_constraintEnd_toStartOf="@+id/tvemail"
+        app:layout_constraintEnd_toStartOf="@+id/tv2email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Phone Number :"
-        app:layout_constraintEnd_toStartOf="@+id/tvphonenumber"
+        app:layout_constraintEnd_toStartOf="@+id/tv2phonenumber"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -55,13 +55,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:text="Address :"
-        app:layout_constraintEnd_toStartOf="@+id/tvaddress"
+        app:layout_constraintEnd_toStartOf="@+id/tv2address"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/tvphonenumber"
+        android:id="@+id/tv2phonenumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -69,10 +69,10 @@
         android:layout_marginRight="156dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvemail" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2email" />
 
     <TextView
-        android:id="@+id/tvaddress"
+        android:id="@+id/tv2address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -80,7 +80,7 @@
         android:layout_marginRight="156dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvphonenumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2phonenumber" />
 
     <TextView
         android:id="@+id/textView12"
@@ -88,13 +88,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="Total Price :"
-        app:layout_constraintEnd_toStartOf="@+id/tvtotalprice"
+        app:layout_constraintEnd_toStartOf="@+id/tv2totalprice"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/tvtotalprice"
+        android:id="@+id/tv2totalprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -102,10 +102,10 @@
         android:layout_marginRight="156dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvaddress" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2address" />
 
     <TextView
-        android:id="@+id/tvlname"
+        android:id="@+id/tv2lname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -113,7 +113,7 @@
         android:layout_marginRight="156dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvfname" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2fname" />
 
     <TextView
         android:id="@+id/textView2"
@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="First Name :"
-        app:layout_constraintEnd_toStartOf="@+id/tvfname"
+        app:layout_constraintEnd_toStartOf="@+id/tv2fname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,44 +131,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:text="Last Name :"
-        app:layout_constraintEnd_toStartOf="@+id/tvlname"
+        app:layout_constraintEnd_toStartOf="@+id/tv2lname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Cancel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/putorder"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/putorder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="372dp"
-        android:text="Place Order"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="CHECKOUT"
+        android:layout_marginTop="16dp"
+        android:text="YOUR ORDER"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

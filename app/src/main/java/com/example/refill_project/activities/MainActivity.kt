@@ -1,9 +1,11 @@
 package com.example.refill_project.activities
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import com.example.refill_project.R
 import com.example.refill_project.showToast
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         //receiving intent
 //        val bundle: Bundle? = intent.extras
@@ -56,4 +59,5 @@ class MainActivity : AppCompatActivity() {
             showToast(msg)
         }
     }
+
 }

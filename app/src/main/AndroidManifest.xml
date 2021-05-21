@@ -15,20 +15,23 @@
 
         <activity android:name=".activities.Signup">
 
+        </activity>
+        <activity android:name=".activities.CartAct" />
+        <activity android:name=".activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CartAct" />
-        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.Splashscreen">
 
         </activity>
         <activity android:name=".activities.WeightsAct" />
         <activity android:name=".activities.ProductsAct" />
-        <activity android:name=".activities.Login" />
+        <activity android:name=".activities.Login">
+
+        </activity>
     </application>
 
 </manifest>

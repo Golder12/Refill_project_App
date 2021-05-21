@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -18,25 +19,29 @@ class Signup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+        setupHomelink()
+        setupLoginlink()
+
 
         btnsignup.setOnClickListener {
-            if(fname.text.toString().length<0 && lname.text.toString().length<0 && email.text.toString().length<0 && phonenumber.text.toString().length<0){
+            if (fname.text.toString().length < 0 && lname.text.toString().length < 0 && email.text.toString().length < 0 && phonenumber.text.toString().length < 0) {
 
                 showToast("All fields are required")
 
-            }else if(phonenumber.text.toString().length<10){
+            } else if (phonenumber.text.toString().length < 10) {
 
                 showToast("Phone number should be more 10 digits")
 
-            }else if(password.text.toString().length<8 && confirmpassword.text.toString().length<8){
+            } else if (password.text.toString().length < 8 && confirmpassword.text.toString().length < 8) {
 
                 showToast("Passowrds must have atleast 8 characters")
 
-            }else if(password.text.toString() == confirmpassword.text.toString()){
+            } else if (password.text.toString() == confirmpassword.text.toString()) {
 
-                var url = "http://refillug.rf.gd/android/signup/"+ fname.text.toString() +"/"+ lname.text.toString() +"/"+ email.text.toString() +"/"+ phonenumber.text.toString() +"/"+ password.text.toString()
-                var rq:RequestQueue = Volley.newRequestQueue(this)
-                var sr = object:StringRequest(Request.Method.GET, url, { response ->
+                var url =
+                    "http://refillug.rf.gd/android/signup/" + fname.text.toString() + "/" + lname.text.toString() + "/" + email.text.toString() + "/" + phonenumber.text.toString() + "/" + password.text.toString()
+                var rq: RequestQueue = Volley.newRequestQueue(this)
+                var sr = object : StringRequest(Request.Method.GET, url, { response ->
 
                     if (response.equals("0")) {
                         showToast("Email Address already used")
@@ -47,23 +52,41 @@ class Signup : AppCompatActivity() {
                         intent.putExtra("welcome_msg", welcome_msg)
                         startActivity(intent)
                     }
-                }, { error-> showToast(error.message!!) })
-                {
+                }, { error -> showToast(error.message!!) }) {
                     @Throws(AuthFailureError::class)
                     override fun getHeaders(): Map<String, String> {
                         val headers = HashMap<String, String>()
-                        headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                        headers.put(
+                            "Cookie",
+                            "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/"
+                        );
 
                         return headers
                     }
                 }
                 rq.add(sr)
 
-            }else{
+            } else {
 
                 showToast("Passwords don't match")
 
             }
+        }
+    }
+
+    private fun setupHomelink() {
+        val linkTextView = findViewById<TextView>(R.id.homeAccount)
+        linkTextView.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+    }
+
+    private fun setupLoginlink() {
+        val linkTextView = findViewById<TextView>(R.id.backtologin)
+        linkTextView.setOnClickListener {
+            val switchActivityIntent = Intent(this, Login::class.java)
+            startActivity(switchActivityIntent)
         }
     }
 }

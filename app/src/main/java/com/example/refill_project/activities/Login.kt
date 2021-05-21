@@ -1,7 +1,10 @@
 package com.example.refill_project.activities
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -14,10 +17,12 @@ import com.example.refill_project.showToast
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.login.*
 
+
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
+        setupActivitylink()
 
         signup.setOnClickListener{
             var intent = Intent(this, Signup::class.java)
@@ -58,6 +63,14 @@ class Login : AppCompatActivity() {
             rq.add(sr)
 
             }
+        }
+    }
+
+    private fun setupActivitylink() {
+        val linkTextView = findViewById<TextView>(R.id.homelogin)
+        linkTextView.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
         }
     }
 }

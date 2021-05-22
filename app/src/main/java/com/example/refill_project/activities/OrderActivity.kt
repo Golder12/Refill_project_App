@@ -1,7 +1,10 @@
 package com.example.refill_project.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -18,10 +21,12 @@ class OrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
+        setupHomelink()
+        setupOrderlink()
 
-        val bundle: Bundle? = intent.extras
-        val msg = bundle!!.getString("msg")
-        showToast(msg!!)
+//        val bundle: Bundle? = intent.extras
+//        val msg = bundle!!.getString("msg")
+//        showToast(msg!!)
 
         var url = "http://refillug.rf.gd/android/order/totalprice/"+ UserInfo.userid.toString()
         var rq: RequestQueue = Volley.newRequestQueue(this)
@@ -44,6 +49,37 @@ class OrderActivity : AppCompatActivity() {
             }
         }
         rq.add(sr)
+
+    }
+    private fun setupHomelink() {
+        val homeicon = findViewById<ImageView>(R.id.homeIcon)
+        val textforhomeicon = findViewById<TextView>(R.id.hometext)
+
+        homeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforhomeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+    }
+
+    private fun setupOrderlink() {
+        val icon = findViewById<ImageView>(R.id.shoppingBag)
+        val textforicon = findViewById<TextView>(R.id.ordertext)
+
+        icon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
 
     }
 }

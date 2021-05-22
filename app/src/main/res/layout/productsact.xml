@@ -12,10 +12,11 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:src="@drawable/what_would_you_like_from_total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/product_rv"
@@ -162,6 +163,35 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/pricetext"
         app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/refill" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

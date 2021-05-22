@@ -122,7 +122,7 @@
             tools:layout_editor_absoluteY="250dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
         app:srcCompat="@drawable/yourorderbackground" />
 
     <ImageView
@@ -268,6 +268,24 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/pricetext"
         app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="41dp"
+            android:layout_height="37dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

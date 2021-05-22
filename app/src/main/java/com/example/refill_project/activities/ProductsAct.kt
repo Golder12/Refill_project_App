@@ -1,7 +1,10 @@
 package com.example.refill_project.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +24,8 @@ class ProductsAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.productsact)
+        setupHomelink()
+        setupOrderlink()
 
 
         val bundle: Bundle? = intent.extras
@@ -47,8 +52,37 @@ class ProductsAct : AppCompatActivity() {
             }
         }
         rq.add(jar)
+    }
 
+    private fun setupHomelink() {
+        val homeicon = findViewById<ImageView>(R.id.homeIcon)
+        val textforhomeicon = findViewById<TextView>(R.id.hometext)
 
+        homeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforhomeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+    }
+
+    private fun setupOrderlink() {
+        val icon = findViewById<ImageView>(R.id.shoppingBag)
+        val textforicon = findViewById<TextView>(R.id.ordertext)
+
+        icon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
 
     }
 }

@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -19,9 +21,6 @@ class Signup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        setupHomelink()
-        setupLoginlink()
-
 
         btnsignup.setOnClickListener {
             if (fname.text.toString().length < 0 && lname.text.toString().length < 0 && email.text.toString().length < 0 && phonenumber.text.toString().length < 0) {
@@ -74,19 +73,4 @@ class Signup : AppCompatActivity() {
         }
     }
 
-    private fun setupHomelink() {
-        val linkTextView = findViewById<TextView>(R.id.homeAccount)
-        linkTextView.setOnClickListener {
-            val switchActivityIntent = Intent(this, MainActivity::class.java)
-            startActivity(switchActivityIntent)
-        }
-    }
-
-    private fun setupLoginlink() {
-        val linkTextView = findViewById<TextView>(R.id.backtologin)
-        linkTextView.setOnClickListener {
-            val switchActivityIntent = Intent(this, Login::class.java)
-            startActivity(switchActivityIntent)
-        }
-    }
 }

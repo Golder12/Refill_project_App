@@ -13,6 +13,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="homeloginlink">Refill Home</string>
+    <string name="homeIcon"></string>
+    <string name="shoppingBag"></string>
+    <string name="priceTag"></string>
+    <string name="profileIcon"></string>
+    <string name="hometext"></string>
+    <string name="ordertext"></string>
+    <string name="pricetext"></string>
+    <string name="profiletext"></string>
     <string name="loginlink">Back to Sign in</string>
 
 

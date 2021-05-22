@@ -5,6 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
@@ -22,6 +25,10 @@ class CartAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
+        setupOrderlink()
+        setupHomelink()
+        setupBacklink()
+
 
         var url = "http://refillug.rf.gd/android/total/getcart/"+UserInfo.userid.toString()
         var list = ArrayList<String>()
@@ -60,6 +67,46 @@ class CartAct : AppCompatActivity() {
                 var intent = Intent(this, CheckoutActivity::class.java)
                 startActivity(intent)
             }
+        }
+    }
+
+    private fun setupOrderlink() {
+        val icon = findViewById<ImageView>(R.id.shoppingBag)
+        val textforicon = findViewById<TextView>(R.id.ordertext)
+
+        icon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+    }
+
+    private fun setupHomelink() {
+        val homeicon = findViewById<ImageView>(R.id.homeIcon)
+        val textforhomeicon = findViewById<TextView>(R.id.hometext)
+
+        homeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforhomeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+    }
+
+    private fun setupBacklink() {
+        val backicon = findViewById<ImageView>(R.id.imageView12)
+
+        backicon.setOnClickListener {
+            finish()
         }
     }
 }

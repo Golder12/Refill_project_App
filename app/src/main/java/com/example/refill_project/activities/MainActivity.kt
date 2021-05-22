@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.android.volley.AuthFailureError
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupHomelink()
+        setupOrderlink()
 
 
         //receiving intent
@@ -96,6 +99,37 @@ class MainActivity : AppCompatActivity() {
             val msg:String = "$station is not yet available."
             showToast(msg)
         }
+    }
+
+    private fun setupHomelink() {
+        val homeicon = findViewById<ImageView>(R.id.homeIcon)
+        val textforhomeicon = findViewById<TextView>(R.id.hometext)
+
+        homeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforhomeicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+    }
+
+    private fun setupOrderlink() {
+        val icon = findViewById<ImageView>(R.id.shoppingBag)
+        val textforicon = findViewById<TextView>(R.id.ordertext)
+
+        icon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
+        textforicon.setOnClickListener {
+            val switchActivityIntent = Intent(this, OrderActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+
     }
 
 }

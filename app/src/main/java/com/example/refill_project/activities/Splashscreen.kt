@@ -20,20 +20,11 @@ class Splashscreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
 
-        val yourLayout = findViewById<View>(R.id.splashscreen) as ConstraintLayout
-        val animationDrawable = yourLayout.background as AnimationDrawable
-        animationDrawable.setEnterFadeDuration(100)
-        animationDrawable.setExitFadeDuration(100)
-        animationDrawable.start()
-
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        val backgroundImage: ImageView = findViewById(R.id.splashImage)
-        val slideAnimation = AnimationUtils.loadAnimation(this, R.anim.side_slide)
-        backgroundImage.startAnimation(slideAnimation)
 
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.

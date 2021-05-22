@@ -25,9 +25,9 @@ class CheckoutActivity : AppCompatActivity() {
 
             tvfname.text = UserInfo.fname
             tvlname.text = UserInfo.lname
-            tvemail.text = UserInfo.email
             tvphonenumber.text = UserInfo.phonenumber
             tvaddress.text = UserInfo.address
+            tvaddress1.text = UserInfo.address
             tvtotalprice.text = response
 
         }, { error-> showToast(error.message!!) })

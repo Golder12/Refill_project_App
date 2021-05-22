@@ -29,7 +29,6 @@ class OrderActivity : AppCompatActivity() {
 
             tv2fname.text = UserInfo.fname
             tv2lname.text = UserInfo.lname
-            tv2email.text = UserInfo.email
             tv2phonenumber.text = UserInfo.phonenumber
             tv2address.text = UserInfo.address
             tv2totalprice.text = response

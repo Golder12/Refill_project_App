@@ -8,53 +8,187 @@
 
     <ListView
         android:id="@+id/cart_lv"
-        android:layout_width="match_parent"
-        android:layout_height="526dp"
+        android:layout_width="409dp"
+        android:layout_height="358dp"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cartheader">
+
+
+    </ListView>
 
     <Button
         android:id="@+id/continue_shopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="548dp"
         android:text="Continue shopping"
-        app:backgroundTint="#689F38"
+        app:backgroundTint="#ABB1A8"
+        app:layout_constraintBottom_toTopOf="@+id/checkout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cart_lv" />
 
     <Button
         android:id="@+id/checkout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="20dp"
         android:text="Checkout"
-        app:backgroundTint="#689F38"
+        app:backgroundTint="#59d411"
+        app:layout_constraintBottom_toTopOf="@+id/menuBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/cartheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cartheader" />
+
+    <ImageView
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/menubar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continue_shopping" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="675dp" />
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageButton
+        android:id="@+id/homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="CART"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/menuBar"
+        app:layout_constraintVertical_bias="0.282"
+        app:srcCompat="@drawable/icon_metro_home"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/shoppingBag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/menuBar"
+        app:layout_constraintVertical_bias="0.289"
+        app:srcCompat="@drawable/icon_awesome_shopping_bag"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/priceTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shoppingBag"
+        app:layout_constraintTop_toTopOf="@+id/menuBar"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/icon_ionic_md_pricetags"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/menuBar"
+        app:layout_constraintTop_toTopOf="@+id/menuBar"
+        app:layout_constraintVertical_bias="0.325"
+        app:srcCompat="@drawable/icon_material_account_circle" />
+
+    <TextView
+        android:id="@+id/hometext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Home"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeIcon"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ordertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Your Order"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/hometext"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingBag" />
+
+    <TextView
+        android:id="@+id/pricetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Price Summary"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/ordertext"
+        app:layout_constraintTop_toBottomOf="@+id/priceTag" />
+
+    <TextView
+        android:id="@+id/profiletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="Profile"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/pricetext"
+        app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

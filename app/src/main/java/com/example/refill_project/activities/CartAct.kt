@@ -27,7 +27,6 @@ class CartAct : AppCompatActivity() {
         setContentView(R.layout.activity_cart)
         setupOrderlink()
         setupHomelink()
-        setupBacklink()
 
 
         var url = "http://refillug.rf.gd/android/total/getcart/"+UserInfo.userid.toString()
@@ -100,13 +99,5 @@ class CartAct : AppCompatActivity() {
             startActivity(switchActivityIntent)
         }
 
-    }
-
-    private fun setupBacklink() {
-        val backicon = findViewById<ImageView>(R.id.imageView12)
-
-        backicon.setOnClickListener {
-            finish()
-        }
     }
 }

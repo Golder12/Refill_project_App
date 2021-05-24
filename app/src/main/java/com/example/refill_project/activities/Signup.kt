@@ -1,12 +1,10 @@
 package com.example.refill_project.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.ImageView
+import android.text.method.LinkMovementMethod
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -17,10 +15,13 @@ import com.example.refill_project.UserInfo
 import com.example.refill_project.showToast
 import kotlinx.android.synthetic.main.activity_signup.*
 
+
 class Signup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+        setupLoginLink()
+        setupHomeLink()
 
         btnsignup.setOnClickListener {
             if (fname.text.toString().length < 0 && lname.text.toString().length < 0 && email.text.toString().length < 0 && phonenumber.text.toString().length < 0) {
@@ -73,4 +74,21 @@ class Signup : AppCompatActivity() {
         }
     }
 
+    private fun setupHomeLink() {
+
+        val linkTextView = findViewById<TextView>(R.id.homeAccount)
+        linkTextView.setOnClickListener {
+            val switchActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(switchActivityIntent)
+        }
+    }
+
+        private fun setupLoginLink() {
+
+            val linkTextView = findViewById<TextView>(R.id.backtologin)
+            linkTextView.setOnClickListener {
+                val switchActivityIntent = Intent(this, Login::class.java)
+                startActivity(switchActivityIntent)
+            }
+        }
 }

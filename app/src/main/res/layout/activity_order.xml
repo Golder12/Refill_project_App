@@ -18,9 +18,10 @@
         android:background="@drawable/orderbackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.3">
 
         <TextView
             android:id="@+id/textView7"
@@ -47,19 +48,21 @@
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/normalline"
-            tools:layout_editor_absoluteY="191dp" />
+            app:srcCompat="@drawable/normalline" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="156dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/normalline"
-            tools:layout_editor_absoluteY="132dp" />
+            app:srcCompat="@drawable/normalline" />
 
         <TextView
             android:id="@+id/tv2lname"
@@ -67,8 +70,10 @@
             android:layout_height="18dp"
             android:layout_marginTop="16dp"
             android:text="LastNameOutput"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView7"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.061" />
 
         <TextView
             android:id="@+id/tv2fname"
@@ -77,9 +82,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="FirstNameOutput"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toEndOf="@+id/tv2lname"
-            app:layout_constraintTop_toTopOf="@+id/tv2lname" />
+            app:layout_constraintTop_toTopOf="@+id/tv2lname"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tv2totalprice"
@@ -89,40 +97,44 @@
             android:textColor="#59d411"
             android:textSize="20dp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="@+id/textView8" />
+            app:layout_constraintTop_toTopOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tv2address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AddressOutput"
-            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:layout_constraintVertical_bias="0.116" />
 
         <TextView
             android:id="@+id/tv2phonenumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Numberoutput"
-            app:layout_constraintBottom_toTopOf="@+id/imageView10"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv2lname"
-            app:layout_constraintTop_toBottomOf="@+id/tv2lname" />
+            app:layout_constraintTop_toBottomOf="@+id/tv2lname"
+            app:layout_constraintVertical_bias="0.112" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
             android:text="TOTAL PRICE : "
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/imageView8"
-            tools:layout_editor_absoluteY="250dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <ImageView
         android:id="@+id/imageView2"

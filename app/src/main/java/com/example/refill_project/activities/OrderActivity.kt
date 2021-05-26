@@ -32,7 +32,7 @@ class OrderActivity : AppCompatActivity() {
         var rq: RequestQueue = Volley.newRequestQueue(this)
         var sr = object: StringRequest(Request.Method.GET, url, { response ->
 
-            tv2fname.text = UserInfo.fname
+            //tv2fname.text = UserInfo.fname
             tv2lname.text = UserInfo.lname
             tv2phonenumber.text = UserInfo.phonenumber
             tv2address.text = UserInfo.address

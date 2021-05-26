@@ -9,13 +9,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
         android:background="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp"/>
+        tools:layout_editor_absoluteX="1dp" />
 
     <ImageView
         android:id="@+id/cartheader"
+        android:background="@drawable/greyfragmentbackground"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
@@ -46,7 +48,8 @@
         app:layout_constraintBottom_toTopOf="@+id/checkout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cart_lv" />
+        app:layout_constraintTop_toBottomOf="@+id/cart_lv"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/checkout"

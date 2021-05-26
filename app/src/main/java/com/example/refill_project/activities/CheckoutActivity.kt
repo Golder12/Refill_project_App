@@ -39,7 +39,10 @@ class CheckoutActivity : AppCompatActivity() {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
-                headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                //makair cookie
+                //headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                //africell cookie
+                headers.put("Cookie", "__test=caa2730227df078b483bf5b63dc8be00; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
 
                 return headers
             }
@@ -70,10 +73,10 @@ class CheckoutActivity : AppCompatActivity() {
                 @Throws(AuthFailureError::class)
                 override fun getHeaders(): Map<String, String> {
                     val headers = HashMap<String, String>()
-                    headers.put(
-                        "Cookie",
-                        "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/"
-                    );
+                    //makair cookie
+                    //headers.put("Cookie", "__test=53e7f0ab4c8aeefdcec6b8b9e8d43286; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
+                    //africell cookie
+                    headers.put("Cookie", "__test=caa2730227df078b483bf5b63dc8be00; expires=Friday, January 1, 2038 at 2:55:55 AM; path=/");
 
                     return headers
                 }
